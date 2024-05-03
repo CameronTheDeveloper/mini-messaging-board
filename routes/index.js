@@ -22,4 +22,14 @@ router.get('/new', (req, res, next) => {
   res.render('form');
 });
 
+router.post('/new', (req, res, next) => {
+  const userInfo = req.body;
+  messages.push({
+    user: userInfo.nameInput,
+    message: userInfo.messageInput,
+    when: new Date()
+  });
+  res.redirect('/');
+});
+
 module.exports = router;
