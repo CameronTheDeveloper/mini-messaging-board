@@ -7,13 +7,13 @@ CREATE TABLE IF NOT EXISTS messages (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     username VARCHAR(255),
     message VARCHAR(255),
-    message_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    message_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO messages (username, message)
 VALUES
 ('Bryan', 'Hello, how are you doing today?'),
-('Sarah', 'I am doing good, how about yourself?'),
+('Sarah', 'I am doing well, how about yourself?'),
 ('Odin', 'Nice to meet both of you!');
 `;
 
