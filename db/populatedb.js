@@ -6,7 +6,8 @@ const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     username VARCHAR(255),
-    message VARCHAR(255)
+    message VARCHAR(255),
+    message_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 );
 
 INSERT INTO messages (username, message)
